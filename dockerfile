@@ -5,12 +5,11 @@ COPY package.json package-lock.json ./
 RUN npm install --force
 
 FROM node:20-alpine as builder
-ARG BUILD_TYPE=ru
 WORKDIR /app
 
 COPY . .
 COPY --from=dependencies /app/node_modules ./node_modules
-RUN npm run build:$BUILD_TYPE
+RUN npm run build
 
 FROM node:20-alpine as runner
 WORKDIR /app
