@@ -1,4 +1,5 @@
 import SwiperContent from "../SwiperContent";
+import SwiperBrand from "../SwiperBrand";
 import Form from "../Form";
 
 const index = () => {
@@ -58,10 +59,27 @@ const index = () => {
           </ul>
         </div>
       </section>
-
+      <section className='section'>
+        <h2>Всегда на связи</h2>
+        <div className='call'>
+          <a href='https://vk.com/aik43' target='_blank' rel='noreferrer'>
+            <img src='/icons/vk.svg' alt='vk' />
+          </a>
+          <a href='https://www.avito.ru/kirovskaya_oblast_kirov/predlozheniya_uslug/remont_stiralnyh_mashin_na_domu_2111203535?utm_campaign=native&utm_medium=item_page_ios&utm_source=soc_sharing_seller'>
+            <img src='/icons/avito.svg' alt='avito' />
+          </a>
+          <a href='tel:+79992256089'>
+            <img src='/icons/phone.svg' alt='tel' />
+          </a>
+        </div>
+      </section>
       <section id='recommend' className='section'>
         <h2>Отзывы клиентов:</h2>
         <SwiperContent />
+      </section>
+      <section id='recommend' className='section'>
+        <h2>Ремонт стиральных машин всех ведущих брендов:</h2>
+        <SwiperBrand />
       </section>
 
       <section id='form' className='section'>
