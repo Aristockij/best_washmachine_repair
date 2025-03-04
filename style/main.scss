@@ -153,9 +153,16 @@ header {
     top: 0;
     right: -100%;
     transition: 0.3s;
+    background: url("/assets/swag.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
 
     ul {
       flex-direction: column;
+      li a {
+        color: #fff;
+      }
     }
 
     &--close {
