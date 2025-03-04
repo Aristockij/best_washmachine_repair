@@ -37,7 +37,7 @@ const index = () => {
         </ul>
       </div>
 
-      <div className='section header header__mob'>
+      <div className='header header__mob'>
         <div>
           <a className='header__phone' href='tel:+79992256089'>
             <img src='/phone-call-svgrepo-com.svg' alt='phone' />
@@ -47,6 +47,9 @@ const index = () => {
           <img src='/icons/burger.svg' alt='burger' />
         </div>
 
+        {showList && (
+          <div className='header__hid--layout' onClick={closePopup} />
+        )}
         <div className={showList ? "header__hid show" : "header__hid"}>
           <span className='header__hid--close' onClick={closePopup}>
             x
