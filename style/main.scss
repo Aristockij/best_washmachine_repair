@@ -154,13 +154,37 @@ header {
     right: -100%;
     transition: 0.3s;
 
+    &::before {
+      content: "";
+      top: 30px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #000;
+      position: absolute;
+    }
+    &::after {
+      content: "";
+      bottom: 30px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #000;
+      position: absolute;
+    }
+
     ul {
       flex-direction: column;
+      padding-top: 60px;
+      li {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
     }
 
     &--close {
       position: absolute;
-      top: 0px;
+      top: 20px;
       right: 0;
       padding: 20px;
       cursor: pointer;
