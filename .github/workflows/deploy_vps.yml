@@ -37,7 +37,7 @@ jobs:
 
           # Подключимся к серверу и перезапустим контейнер
           ssh -i ~/.ssh/id_vpskey -o StrictHostKeyChecking=no root@194.58.126.154 <<EOF
-            cd ~/../www
+            cd /www
 
             docker pull aristockij/wash-machine:latest &
 
