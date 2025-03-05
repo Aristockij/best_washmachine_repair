@@ -41,6 +41,7 @@ const index = () => {
   const CHAT_ID = process.env.NEXT_PUBLIC_CHAT_ID;
   const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
   console.log(TOKEN, "chatId: ", CHAT_ID);
+
   const sendFormVal = async (val) => {
     let message = `
       <b>новое сообщение! </b>

@@ -9,6 +9,13 @@ WORKDIR /app
 
 COPY . .
 COPY --from=dependencies /app/node_modules ./node_modules
+
+ARG NEXT_PUBLIC_TOKEN
+ARG NEXT_PUBLIC_CHAT_ID
+
+ENV NEXT_PUBLIC_TOKEN=${NEXT_PUBLIC_TOKEN}
+ENV NEXT_PUBLIC_CHAT_ID=${NEXT_PUBLIC_CHAT_ID}
+
 RUN npm run build
 
 FROM node:20-alpine as runner
