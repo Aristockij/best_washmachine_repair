@@ -36,8 +36,8 @@ jobs:
           chmod 600 ~/.ssh/id_vpskey
 
           # Подключимся к серверу и перезапустим контейнер
-          ssh -o StrictHostKeyChecking=no root@194.58.126.154 <<EOF
-            cd /path/to/docker-compose/
+          ssh -i ~/.ssh/id_vpskey -o StrictHostKeyChecking=no root@194.58.126.154 <<EOF
+            cd ~/../www
 
             docker pull aristockij/wash-machine:latest &
 
