@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ремонт стиральных машин",
     description: "Оставьте заявку и мастер перезвонит вам в течении 30 минут",
-    images: "/assets/og.jpeg",
+    images: "https://master-stirka.ru/assets/og.jpeg",
   },
 };
 
