@@ -32,6 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <meta
+        property='og:image'
+        content='https://master-stirka.ru/assets/og.jpeg'
+      />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
