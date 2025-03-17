@@ -1,9 +1,8 @@
-import { GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 
 function GoogleMetricCounter() {
   return (
     <>
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GM_ID} />
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GM_ID}`}
         strategy='afterInteractive'
