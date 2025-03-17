@@ -112,7 +112,7 @@ const index = () => {
 
                 <div className='input'>
                   <label htmlFor='phone'>Ваш телефон:</label>
-                  <Field name='phone'>
+                  <Field id={"phone"} name='phone'>
                     {({ field, value }) => (
                       <MaskedInput
                         mask={phoneMask}
@@ -124,7 +124,7 @@ const index = () => {
                   {errors && <div className='error'>{errors.phone}</div>}
                 </div>
 
-                <button className='btn ' type='submit' disabled={isSubmitting}>
+                <button className='btn' type='submit' disabled={isSubmitting}>
                   Оставить заявку
                 </button>
               </div>
