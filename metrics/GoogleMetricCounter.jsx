@@ -4,6 +4,7 @@ import { useEffect } from "react";
 function GoogleMetricCounter() {
   useEffect(() => {
     console.log("Google Analytics ID:", process.env.NEXT_PUBLIC_GM_ID);
+    if (!process.env.NEXT_PUBLIC_GM_ID) return;
 
     const script1 = document.createElement("script");
     script1.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GM_ID}`;
