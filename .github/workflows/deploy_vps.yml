@@ -27,6 +27,9 @@ jobs:
           docker buildx build \
           --build-arg NEXT_PUBLIC_TOKEN=${{ secrets.NEXT_PUBLIC_TOKEN }} \
           --build-arg NEXT_PUBLIC_CHAT_ID=${{ secrets.NEXT_PUBLIC_CHAT_ID }} \
+          --build-arg NEXT_PUBLIC_YA_ID=${{ secrets.NEXT_PUBLIC_YA_ID }} \
+          --build-arg NEXT_PUBLIC_GM_ID=${{ secrets.NEXT_PUBLIC_GM_ID }} \
+
           --platform linux/amd64 -t aristockij/wash-machine --push .
 
       - name: Deploy to VPS
