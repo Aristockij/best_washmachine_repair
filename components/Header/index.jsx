@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const index = () => {
   const [showList, setShowList] = useState(false);
@@ -10,6 +10,14 @@ const index = () => {
   const openPopup = () => {
     setShowList(true);
   };
+
+  useEffect(() => {
+    console.log(
+      "check on server: ",
+      process.env.NEXT_PUBLIC_YA_ID,
+      process.env.NEXT_PUBLIC_GM_ID
+    );
+  }, []);
 
   return (
     <header className='container '>
