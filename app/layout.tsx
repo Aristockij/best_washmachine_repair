@@ -5,6 +5,7 @@ import "@/style/main.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 import YandexMetricCounter from "@/metrics/YandexMetricCounter";
+import GoogleMetricCounter from "@/metrics/GoogleMetricCounter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({
         content='https://master-stirka.ru/assets/og.jpeg'
       />
       <YandexMetricCounter />
+      <GoogleMetricCounter />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
