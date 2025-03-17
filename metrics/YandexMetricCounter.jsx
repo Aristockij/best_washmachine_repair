@@ -3,8 +3,6 @@ import { useEffect } from "react";
 
 function YandexMetricCounter() {
   useEffect(() => {
-    console.log("Yandex Analytics ID:", process.env.NEXT_PUBLIC_YA_ID);
-
     if (!process.env.NEXT_PUBLIC_YA_ID) return;
 
     (function (m, e, t, r, i, k, a) {

@@ -3,7 +3,6 @@ import { useEffect } from "react";
 
 function GoogleMetricCounter() {
   useEffect(() => {
-    console.log("Google Analytics ID:", process.env.NEXT_PUBLIC_GM_ID);
     if (!process.env.NEXT_PUBLIC_GM_ID) return;
 
     const script1 = document.createElement("script");
