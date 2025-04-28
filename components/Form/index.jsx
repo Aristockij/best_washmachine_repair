@@ -95,6 +95,7 @@ const index = () => {
                 <img src='/icons/checked.svg' alt='checked' />
               </div>
               Ваша заявка принята!
+              <div>Мастер скоро свяжется с вами</div>
             </div>
           ) : (
             <div className='form__wrap'>
