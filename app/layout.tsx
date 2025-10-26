@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import YandexMetricCounter from "@/metrics/YandexMetricCounter";
 import GoogleMetricCounter from "@/metrics/GoogleMetricCounter";
+import CookieAccept from "@/components/CookieAccept";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <CookieAccept />
       </body>
     </html>
   );

@@ -369,13 +369,27 @@ header {
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 0 30px;
-  @media (max-width: 750px) {
-    padding: 0 15px;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0 30px 50px 30px;
+
+  a {
+    color: #fff;
+    font-size: 12px;
   }
+
+  @media (max-width: 750px) {
+    padding: 0 15px 50px 15px;
+    flex-direction: column;
+  }
+
   &__list {
     font-size: 14px;
   }
+}
+
+.created {
+  font-size: 12px;
 }
 
 .btn {
@@ -395,5 +409,42 @@ header {
   &:hover {
     color: #fff;
     background: #5587e4;
+  }
+}
+
+.checkbox {
+  &__item {
+    input {
+      height: auto;
+      margin-right: 5px;
+    }
+  }
+
+  &__wrap {
+    margin-bottom: 20px;
+  }
+}
+
+.cookie {
+  &__wrap {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #fff;
+    z-index: 9999;
+    border-radius: 20px;
+    color: #000;
+    max-width: 400px;
+    padding: 15px;
+    border: 1px solid #5587e4;
+
+    button {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+    margin-bottom: 20px;
   }
 }

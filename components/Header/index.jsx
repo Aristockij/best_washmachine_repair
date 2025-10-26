@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
 const index = () => {
   const [showList, setShowList] = useState(false);
@@ -23,16 +24,16 @@ const index = () => {
 
         <ul>
           <li>
-            <a href='#primary'>Преимущества</a>
+            <Link href='/#primary'>Преимущества</Link>
           </li>
           <li>
-            <a href='#service'>Сервис</a>
+            <Link href='/#service'>Сервис</Link>
           </li>
           <li>
-            <a href='#recommend'>Отзывы</a>
+            <Link href='/#recommend'>Отзывы</Link>
           </li>
           <li>
-            <a href='#form'>Оставить заявку</a>
+            <Link href='/#form'>Оставить заявку</Link>
           </li>
         </ul>
       </div>
@@ -56,24 +57,24 @@ const index = () => {
           </span>
           <ul>
             <li>
-              <a href='#primary' onClick={closePopup}>
+              <Link href='/#primary' onClick={closePopup}>
                 Преимущества
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='#service' onClick={closePopup}>
+              <Link href='/#service' onClick={closePopup}>
                 Сервис
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='#recommend' onClick={closePopup}>
+              <Link href='/#recommend' onClick={closePopup}>
                 Отзывы
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='#form' onClick={closePopup}>
+              <Link href='/#form' onClick={closePopup}>
                 Оставить заявку
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import MaskedInput from "react-text-mask";
+import Link from "next/link";
 
 const index = () => {
   const [formSendSuccess, setFormSendSuccess] = useState(false);
@@ -31,10 +32,12 @@ const index = () => {
   ];
 
   const validation = Yup.object().shape({
-    name: Yup.string().required("введите имя"),
     phone: Yup.string()
       .required("Введите телефон")
       .matches(phoneRegExp, "Неверный формат номера телефона."),
+    policy: Yup.boolean().required(
+      "Необходимо ваше согласие с политикой конфеденциальности "
+    ),
   });
 
   const TOKEN = process.env.NEXT_PUBLIC_TOKEN;
@@ -76,7 +79,7 @@ const index = () => {
 
   return (
     <Formik
-      initialValues={{ name: "", question: "", phone: "" }}
+      initialValues={{ name: "", question: "", phone: "", policy: true }}
       validationSchema={validation}
       onSubmit={(values, { setSubmitting, resetForm }) => {
         sendFormVal(values);
@@ -123,6 +126,19 @@ const index = () => {
                     )}
                   </Field>
                   {errors && <div className='error'>{errors.phone}</div>}
+                </div>
+
+                <div className='checkbox__wrap'>
+                  <div className='checkbox__item'>
+                    <Field type='checkbox' id={"policy"} name={"policy"} />
+                    <label htmlFor='policy'>
+                      оставляя заявку на сайте, вы соглашаетесь с{" "}
+                      <Link rel='noreferrer' href='/policy'>
+                        политикой конфеденциальности
+                      </Link>
+                    </label>
+                  </div>
+                  {errors && <div className='error'>{errors.policy}</div>}
                 </div>
 
                 <button className='btn' type='submit' disabled={isSubmitting}>
