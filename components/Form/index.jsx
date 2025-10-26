@@ -35,8 +35,9 @@ const index = () => {
     phone: Yup.string()
       .required("Введите телефон")
       .matches(phoneRegExp, "Неверный формат номера телефона."),
-    policy: Yup.boolean().required(
-      "Необходимо ваше согласие с политикой конфеденциальности "
+    policy: Yup.boolean().oneOf(
+      [true],
+      "Необходимо ваше согласие с политикой конфиденциальности"
     ),
   });
 
