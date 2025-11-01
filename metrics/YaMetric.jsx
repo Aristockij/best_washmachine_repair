@@ -2,13 +2,11 @@
 
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
-import { useLocale } from "next-intl";
 
 export default function Index() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const locale = useLocale();
-  const ymId = locale === "en" ? 104088537 : 104088523;
+  const ymId = process.env.NEXT_PUBLIC_YA_ID;
 
   useEffect(() => {
     const url = `${pathname}?${searchParams}`;

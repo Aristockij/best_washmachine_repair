@@ -5,6 +5,7 @@ import "@/style/main.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 import YandexMetricCounter from "@/metrics/YandexMetricCounter";
+import YaMetric from "@/metrics/YaMetric";
 import GoogleMetricCounter from "@/metrics/GoogleMetricCounter";
 import CookieAccept from "@/components/CookieAccept";
 
@@ -39,8 +40,11 @@ export default function RootLayout({
         property='og:image'
         content='https://master-stirka.ru/assets/og.jpeg'
       />
-      <YandexMetricCounter />
-      <GoogleMetricCounter />
+      <head>
+        <YandexMetricCounter />
+        <YaMetric />
+        <GoogleMetricCounter />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
