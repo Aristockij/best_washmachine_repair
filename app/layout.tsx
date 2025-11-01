@@ -8,6 +8,7 @@ import YandexMetricCounter from "@/metrics/YandexMetricCounter";
 import YaMetric from "@/metrics/YaMetric";
 import GoogleMetricCounter from "@/metrics/GoogleMetricCounter";
 import CookieAccept from "@/components/CookieAccept";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,7 +43,9 @@ export default function RootLayout({
       />
       <head>
         <YandexMetricCounter />
-        <YaMetric />
+        <Suspense>
+          <YaMetric />
+        </Suspense>
         <GoogleMetricCounter />
       </head>
       <body
