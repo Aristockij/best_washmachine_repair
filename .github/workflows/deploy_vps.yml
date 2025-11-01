@@ -42,15 +42,15 @@ jobs:
 
           # Подключимся к серверу и перезапустим контейнер
           ssh -i ~/.ssh/id_vpskey -o StrictHostKeyChecking=no root@79.174.92.101 <<EOF
-            cd /www
+            cd ./www/frontend
 
             docker pull aristockij/wash-machine:latest &
 
             docker pull nginx:latest &
             wait
 
-            docker-compose stop
-            docker-compose up -d
+            docker compose stop
+            docker compose up -d
             
           EOF
 
