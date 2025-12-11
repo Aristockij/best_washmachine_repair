@@ -1,12 +1,10 @@
 import SwiperContent from "../SwiperContent";
 import SwiperBrand from "../SwiperBrand";
 import Form from "../Form";
-// import Canvas from "@/components/Canvas";
 
 const index = () => {
   return (
     <main className='container'>
-      {/* <Canvas /> */}
       <section className='main__section '>
         <div className='main__content'>
           <div>
