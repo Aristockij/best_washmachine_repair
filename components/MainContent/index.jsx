@@ -1,10 +1,12 @@
 import SwiperContent from "../SwiperContent";
 import SwiperBrand from "../SwiperBrand";
 import Form from "../Form";
+// import Canvas from "@/components/Canvas";
 
 const index = () => {
   return (
     <main className='container'>
+      {/* <Canvas /> */}
       <section className='main__section '>
         <div className='main__content'>
           <div>
@@ -81,7 +83,6 @@ const index = () => {
         <h2>Ремонт стиральных машин всех ведущих брендов:</h2>
         <SwiperBrand />
       </section>
-
       <section id='form' className='section'>
         <Form />
       </section>
