@@ -65,10 +65,14 @@ const index = () => {
           <a href='https://vk.com/aik43' target='_blank' rel='noreferrer'>
             <img src='/icons/vk.svg' alt='vk' />
           </a>
-          <a href='https://www.avito.ru/kirovskaya_oblast_kirov/predlozheniya_uslug/remont_stiralnyh_mashin_na_domu_2111203535?utm_campaign=native&utm_medium=item_page_ios&utm_source=soc_sharing_seller'>
+          <a
+            href='https://www.avito.ru/brands/29ac69312ec60c174ca4dd1b9901149c'
+            target='_blank'
+            rel='noreferrer'
+          >
             <img src='/icons/avito.svg' alt='avito' />
           </a>
-          <a href='tel:+79992256089'>
+          <a href='tel:+79992256089' rel='noreferrer'>
             <img src='/icons/phone.svg' alt='tel' />
           </a>
         </div>
